@@ -110,5 +110,7 @@ public class Camioneta extends Vehiculo {
        private boolean volco;
        public static int velocidadMaxima = 90;
        public static String traccion = "4X4";
-
 }
+
+//si viste como era?
+//otra vez entonces
