@@ -11,6 +11,13 @@ public class Automovil extends Vehiculo{
        this.puestos= puestos;
     }
 
+    public int getPuestos() {
+        return puestos;
+    }
+
+    public void setPuestos(int puestos) {
+        this.puestos = puestos;
+    }
 }
 
 public class Vehiculo {
@@ -160,6 +167,14 @@ public class Camion extends Vehiculo {
         super(placa, velocidadMaxima:80, puertas:2, nombre, precio, peso, traccion:"4X2", fabricante);
         this.ejes= ejes;
     }
+
+    public int getEjes() {
+        return ejes;
+    }
+
+    public void setEjes(int ejes) {
+        this.ejes = ejes;
+    }
 }
 
 public class Camioneta extends Vehiculo {
@@ -170,6 +185,14 @@ public class Camioneta extends Vehiculo {
     public Camioneta  (String placa, int velocidadMaxima, int puertas, String nombre, int precio, int peso, String traccion, Fabricante fabricante, boolean volco) {
         super(placa, velocidadMaxima:80, puertas:2, nombre, precio, peso, traccion:"4X2", fabricante);
         this.volco= volco;
+    }
+
+    public void setVolco(boolean volco) {
+        this.volco = volco;
+    }
+
+    public boolean isVolco() {
+        return volco;
     }
 }
 
