@@ -6,17 +6,9 @@ public class Automovil extends Vehiculo{
    public static int velocidadMaxima = 100;
    public static String traccion = "FWD";
 
-    public Automovil (String placa, int velocidadMaxima, int puertas, String nombre, int precio, int peso, String traccion, Fabricante fabricante, int CantidadVehiculos, int puestos) {
-        setPlaca(placa);
-        setVelocidadMaxima(velocidadMaxima);
-        setPuertas(puertas);
-        setNombre(nombre);
-        setPrecio(precio);
-        setPeso(peso);
-        setTraccion(traccion);
-        setFabricante(fabricante);
-        setCantidadVehiculos(CantidadVehiculos);
-        this.puestos= puestos;
+    public Automovil (String placa, int velocidadMaxima, int puertas, String nombre, int precio, int peso, String traccion, Fabricante fabricante, int puestos) {
+       super(placa, velocidadMaxima:100, puertas:4, nombre, precio, peso, traccion:"FWD", fabricante);
+       this.puestos= puestos;
     }
 
 }
@@ -30,7 +22,19 @@ public class Vehiculo {
     private int peso;
     private String traccion;
     private Fabricante fabricante;
-    private int CantidadVehiculos;
+    public static int CantidadVehiculos;
+
+    public Vehiculo (String placa, int velocidadMaxima, int puertas, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
+        this.placa=placa;
+        this.velocidadMaxima=velocidadMaxima;
+        this.puertas=puertas;
+        this.nombre= nombre;
+        this.precio = precio;
+        this.peso = peso;
+        this.traccion = traccion;
+        this.fabricante = fabricante;
+        CantidadVehiculos++;
+    }
 
     public String getPlaca() {
         return placa;
@@ -107,6 +111,10 @@ public class Vehiculo {
     public class Pais {
        private String nombre;
 
+       public Pais (String nombre) {
+           this.nombre
+       }
+
         public String getNombre() {
             return nombre;
         }
@@ -120,6 +128,11 @@ public class Fabricante {
      private String nombre;
      private Pais pais;
 
+     public Fabricante (String nombre, Pais pais) {
+         this.nombre = nombre;
+         this.pais =pais;
+
+     }
     public String getNombre() {
         return nombre;
     }
@@ -143,18 +156,10 @@ public class Camion extends Vehiculo {
      public static int velocidadMaxima = 80;
      public static String traccion = "4X2";
 
-     public Camion (String placa, int velocidadMaxima, int puertas, String nombre, int precio, int peso, String traccion, Fabricante fabricante, int CantidadVehiculos, int ejes) {
-         setPlaca(placa);
-         setVelocidadMaxima(velocidadMaxima);
-         setPuertas(puertas);
-         setNombre(nombre);
-         setPrecio(precio);
-         setPeso(peso);
-         setTraccion(traccion);
-         setFabricante(fabricante);
-         setCantidadVehiculos(CantidadVehiculos);
-         this.ejes= ejes;
-     }
+    public Camion  (String placa, int velocidadMaxima, int puertas, String nombre, int precio, int peso, String traccion, Fabricante fabricante, int ejes) {
+        super(placa, velocidadMaxima:80, puertas:2, nombre, precio, peso, traccion:"4X2", fabricante);
+        this.ejes= ejes;
+    }
 }
 
 public class Camioneta extends Vehiculo {
@@ -162,16 +167,8 @@ public class Camioneta extends Vehiculo {
        public static int velocidadMaxima = 90;
        public static String traccion = "4X4";
 
-    public Camioneta (String placa, int velocidadMaxima, int puertas, String nombre, int precio, int peso, String traccion, Fabricante fabricante, int CantidadVehiculos, boolean volco) {
-        setPlaca(placa);
-        setVelocidadMaxima(velocidadMaxima);
-        setPuertas(puertas);
-        setNombre(nombre);
-        setPrecio(precio);
-        setPeso(peso);
-        setTraccion(traccion);
-        setFabricante(fabricante);
-        setCantidadVehiculos(CantidadVehiculos);
+    public Camioneta  (String placa, int velocidadMaxima, int puertas, String nombre, int precio, int peso, String traccion, Fabricante fabricante, boolean volco) {
+        super(placa, velocidadMaxima:80, puertas:2, nombre, precio, peso, traccion:"4X2", fabricante);
         this.volco= volco;
     }
 }
